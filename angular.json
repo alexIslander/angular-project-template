@@ -23,7 +23,7 @@
             "outputPath": "dist/example-app",
             "index": "projects/example-app/src/index.html",
             "browser": "projects/example-app/src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [],
             "tsConfig": "projects/example-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
