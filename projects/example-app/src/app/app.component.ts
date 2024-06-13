@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
@@ -7,5 +7,6 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
   standalone: true,
   imports: [MainLayoutComponent],
   template: `<my-org-main-layout />`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

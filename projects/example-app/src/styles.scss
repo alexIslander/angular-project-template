@@ -1,16 +1,10 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
+// TODO rework to mat3 theme
 $ax-blue-palette: (
   // should be same as in tailwind.config.js
   50: #eff6ff,
@@ -37,28 +31,19 @@ $ax-blue-palette: (
   )
 );
 
-$example-app-primary: mat.define-palette($ax-blue-palette, 700, 600, 900);
-$example-app-accent: mat.define-palette(mat.$blue-palette, A400, A100, A700);
-$example-app-warn: mat.define-palette(mat.$red-palette);
-
-// The warn palette is optional (defaults to red).
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$example-app-theme: mat.define-light-theme(
+$example-app-theme: mat.define-theme(
   (
     color: (
-      primary: $example-app-primary,
-      accent: $example-app-accent,
-      warn: $example-app-warn,
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$red-palette,
     ),
   )
 );
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($example-app-theme);
+html {
+  @include mat.all-component-themes($example-app-theme);
+}
 
 @tailwind base;
 @tailwind components;

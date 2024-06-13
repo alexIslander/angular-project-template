@@ -6,8 +6,12 @@ import {
   withInMemoryScrolling,
   withRouterConfig,
 } from '@angular/router';
-import { ENVIRONMENT_INITIALIZER } from '@angular/core';
+import {
+  ENVIRONMENT_INITIALIZER,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export interface CoreOptions {
   routes: Routes;
@@ -15,7 +19,9 @@ export interface CoreOptions {
 
 export function provideCore({ routes }: CoreOptions) {
   return [
+    provideExperimentalZonelessChangeDetection(),
     provideAnimationsAsync(),
+    provideHttpClient(withFetch()),
     provideRouter(
       routes,
       withRouterConfig({
