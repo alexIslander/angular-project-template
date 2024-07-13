@@ -69,7 +69,7 @@ h2 {
 }
 
 p {
-  @apply text-lg mb-4;
+  @apply text-lg leading-relaxed mb-4;
 
   &.subtitle {
     @apply text-2xl leading-relaxed text-slate-600;
