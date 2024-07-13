@@ -1,6 +1,6 @@
 <mat-toolbar class="fixed shadow-lg !bg-white">
   <div class="container mx-auto px-10">
-    <div class="flex justify-between">
+    <header class="flex justify-between">
       <a
         href="https://angularexperts.io"
         target="_blank"
@@ -22,7 +22,7 @@
         />
       </a>
 
-      <div class="flex items-center gap-4">
+      <nav class="flex items-center gap-4">
         @for (route of ['home', 'order', 'product']; track $index) {
           <a
             [routerLink]="['/', route]"
@@ -33,13 +33,13 @@
             >{{ route | titlecase }}</a
           >
         }
-      </div>
-    </div>
+      </nav>
+    </header>
   </div>
 </mat-toolbar>
 
 <main class="container mx-auto mt-16 p-10">
-  <router-outlet></router-outlet>
+  <router-outlet />
 </main>
 
 <footer class="mt-auto p-10 bg-white">
