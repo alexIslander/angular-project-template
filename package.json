@@ -23,18 +23,18 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.2.4",
-    "@angular/cdk": "^18.1.0",
+    "@angular/cdk": "^19.2.7",
     "@angular/common": "^19.2.4",
     "@angular/compiler": "^19.2.4",
     "@angular/core": "^19.2.4",
     "@angular/forms": "^19.2.4",
-    "@angular/material": "^18.1.0",
+    "@angular/material": "^19.2.7",
     "@angular/platform-browser": "^19.2.4",
     "@angular/platform-browser-dynamic": "^19.2.4",
     "@angular/router": "^19.2.4",
     "rxjs": "~7.8.2",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "^0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.5",
@@ -65,6 +65,6 @@
     "prettier": "^3.1.1",
     "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.3.6",
-    "typescript": "~5.5.3"
+    "typescript": "^5.8.2"
   }
 }
