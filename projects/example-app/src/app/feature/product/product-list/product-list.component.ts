@@ -9,20 +9,19 @@ import { DocumentManagerComponent } from '../../../pattern/document-manager/docu
 import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'my-org-product-list',
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterOutlet,
-    RouterLinkActive,
-    MatButtonModule,
-    MatIconModule,
-    CardComponent,
-    DocumentManagerComponent,
-  ],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'my-org-product-list',
+    imports: [
+        RouterLink,
+        RouterOutlet,
+        RouterLinkActive,
+        MatButtonModule,
+        MatIconModule,
+        CardComponent,
+        DocumentManagerComponent,
+    ],
+    templateUrl: './product-list.component.html',
+    styleUrl: './product-list.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent {
   products = inject(ProductService).products;
