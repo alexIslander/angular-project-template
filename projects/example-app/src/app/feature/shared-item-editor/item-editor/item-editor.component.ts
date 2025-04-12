@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,12 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from '../../../ui/card/card.component';
 
 @Component({
-  selector: 'my-org-item-editor',
-  standalone: true,
-  imports: [MatButtonModule, MatIconModule, RouterLink, CardComponent],
-  templateUrl: './item-editor.component.html',
-  styleUrl: './item-editor.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'my-org-item-editor',
+    imports: [MatButtonModule, MatIconModule, CardComponent],
+    templateUrl: './item-editor.component.html',
+    styleUrl: './item-editor.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemEditorComponent {
   private router = inject(Router);

@@ -12,12 +12,11 @@ import { DocumentManagerService } from './document-manager.service';
 import { DocumentManagerCtx } from './document-manager.types';
 
 @Component({
-  selector: 'my-org-document-manager',
-  standalone: true,
-  imports: [CardComponent],
-  templateUrl: './document-manager.component.html',
-  styleUrl: './document-manager.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'my-org-document-manager',
+    imports: [CardComponent],
+    templateUrl: './document-manager.component.html',
+    styleUrl: './document-manager.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DocumentManagerComponent {
   private documentManagerService = inject(DocumentManagerService);
@@ -29,6 +28,5 @@ export class DocumentManagerComponent {
     () => {
       this.documentManagerService.loadDocumentsForContext(this.ctx());
     },
-    { allowSignalWrites: true },
   );
 }

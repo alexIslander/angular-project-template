@@ -9,12 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'my-org-card',
-  standalone: true,
-  imports: [MatButtonModule, MatIconModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'my-org-card',
+    imports: [MatButtonModule, MatIconModule],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
   isCloseable = input(false);
